@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEMCO Loan Management System</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+    <div class="container">
+
+    <nav class="sidebar">
+
+    <div class="logo">
+    <h2>SEMCO</h2>
+    <p>Loan Portal</p>
+    </div>
+
+    <ul>
+
+    <li class="active" data-target="dashboard">Dashboard</li>
+
+    <li data-target="members">
+    Members Info
+    </li>
+
+    <li data-target="services">
+    Loan Services
+    </li>
+
+    <li data-target="active-loans">
+    Active Loans
+    </li>
+
+    <li data-target="savings">
+    Savings Ledger
+    </li>
+
+    <li data-target="payments">
+    Payments
+    </li>
+
+    <li data-target="reports">
+    Reports
+    </li>
+
+    </ul>
+
+    </nav>
+
+
+    <main class="main-content">
+
+    <header>
+
+    <h1 id="page-title">
+    Dashboard
+    </h1>
+
+    <div class="user-profile">
+    Admin : Dela Cruz
+    </div>
+
+    </header>
+
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboard" class="content-section">
+
+    <div class="stats-grid">
+
+    <div class="card">
+    <h3>Total Members</h3>
+    <p class="stat-value">
+    0
+    </p>
+    </div>
+
+    <div class="card">
+    <h3>Active Loans</h3>
+    <p class="stat-value">
+    ₱4.5M
+    </p>
+    </div>
+
+    <div class="card">
+    <h3>Total Savings</h3>
+    <p class="stat-value">
+    ₱820K
+    </p>
+    </div>
+
+    <div class="card warning">
+    <h3>Overdue</h3>
+    <p class="stat-value">
+    12 Cases
+    </p>
+    </div>
+
+    </div>
+
+    </section>
+
+
+    <!-- MEMBERS -->
+
+    <section id="members"
+    class="content-section d-none">
+
+    <div class="table-container">
+
+    <div class="table-header">
+    <h2>Member Registry</h2>
+
+    <button class="btn btn-success" id="add-member-btn">
+    Add Member
+    </button>
+
+    </div>
+
+    <table>
+
+    <thead>
+
+    <tr>
+
+    <th>ID</th>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Salary</th>
+    <th>Contact</th>
+    <th>Action</th>
+
+    </tr>
+
+    </thead>
+
+    <tbody>
+    <!-- Members will be rendered by JS -->
+    </tbody>
+
+    </table>
+
+    </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services"
+    class="content-section d-none">
+
+    <div class="table-container">
+
+    <div class="table-header">
+
+    <h2>Loan Products</h2>
+
+    <button class="btn btn-success">
+    Add Product
+    </button>
+
+    </div>
+
+    <table>
+
+    <tr>
+
+    <th>Code</th>
+    <th>Name</th>
+    <th>Max Amount</th>
+    <th>Interest</th>
+    <th>Term</th>
+
+    </tr>
+
+    <tr>
+
+    <td>A</td>
+    <td>Personal Loan</td>
+    <td>₱100000</td>
+    <td>5%</td>
+    <td>24 months</td>
+
+    </tr>
+
+    <tr>
+
+    <td>B</td>
+    <td>Car Loan</td>
+    <td>₱1500000</td>
+    <td>3.5%</td>
+    <td>60 months</td>
+
+    </tr>
+
+    </table>
+
+    </div>
+
+    </section>
+
+
+    <!-- ACTIVE LOANS -->
+
+    <section id="active-loans"
+    class="content-section d-none">
+
+    <div class="table-container">
+
+    <h2>Loan Monitoring</h2>
+
+    <table>
+
+    <tr>
+
+    <th>Loan ID</th>
+    <th>Principal</th>
+    <th>Balance</th>
+    <th>Paid</th>
+    <th>Next Due</th>
+    <th>Status</th>
+
+    </tr>
+
+    <tr>
+
+    <td>5001</td>
+
+    <td>₱50000</td>
+
+    <td>₱35000</td>
+
+    <td>₱15000</td>
+
+    <td>June 1</td>
+
+    <td>
+
+    <span class="badge pending">
+    Ongoing
+    </span>
+
+    </td>
+
+    </tr>
+
+    </table>
+
+    </div>
+
+    </section>
+
+
+    <!-- SAVINGS -->
+
+    <section id="savings"
+    class="content-section d-none">
+
+    <div class="table-container">
+
+    <h2>Savings Ledger</h2>
+
+    <table>
+
+    <tr>
+
+    <th>Date</th>
+    <th>Member</th>
+    <th>Type</th>
+    <th>Amount</th>
+    <th>Balance</th>
+
+    </tr>
+
+    <tr>
+
+    <td>Feb 10</td>
+
+    <td>10000001</td>
+
+    <td>Deposit</td>
+
+    <td>₱5000</td>
+
+    <td>₱15000</td>
+
+    </tr>
+
+    </table>
+
+    </div>
+
+    </section>
+
+
+    <!-- PAYMENTS -->
+
+    <section id="payments"
+    class="content-section d-none">
+
+    <div class="table-container">
+
+    <h2>Payment History</h2>
+
+    <table>
+
+    <tr>
+
+    <th>Ref</th>
+    <th>Loan</th>
+    <th>Amount</th>
+    <th>Date</th>
+    <th>Check</th>
+
+    </tr>
+
+    <tr>
+
+    <td>6001</td>
+
+    <td>5001</td>
+
+    <td>₱4500</td>
+
+    <td>May 1</td>
+
+    <td>123456</td>
+
+    </tr>
+
+    </table>
+
+    </div>
+
+    </section>
+
+
+    <!-- REPORTS -->
+
+    <section id="reports"
+    class="content-section d-none">
+
+    <div class="card">
+
+    <h2>
+    Generate Monthly Report
+    </h2>
+
+    <br>
+
+    <input type="month">
+
+    <button class="btn btn-primary">
+    Download PDF
+    </button>
+
+    </div>
+
+    </section>
+
+
+    </main>
+
+    </div>
+
+
+    <!-- MODAL FOR ADD MEMBER -->
+    <div id="add-member-modal" class="modal-overlay d-none">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h2>Add New Member</h2>
+        <button type="button" id="close-modal-btn" class="close-btn">&times;</button>
+        </div>
+        <form id="add-member-form">
+        <label>Full Name</label>
+        <input type="text" id="member-name" required placeholder="Enter full name">
+        
+        <label>Salary (Monthly)</label>
+        <input type="number" id="member-salary" required placeholder="Enter salary">
+        
+        <label>Contact Number</label>
+        <input type="text" id="member-contact" required placeholder="Enter contact number">
+        
+        <label>Status</label>
+        <select id="member-status">
+            <option value="Active">Active</option>
+            <option value="Pending">Pending</option>
+        </select>
+        
+        <button type="submit" class="btn btn-success" style="width:100%; padding:12px;">Save Member</button>
+        </form>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    </body>
+
+</html>
